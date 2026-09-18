@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FDFBF7;
+    color: #111111;
+  }
+}
+
+/* Neo-Brutalist Component Utilities */
+@layer components {
+  /* Tactile Button */
+  .neo-btn {
+    @apply font-mono font-bold px-5 py-2.5 border-3 border-black rounded-none transition-all duration-150 active:translate-x-1 active:translate-y-1 active:shadow-none inline-flex items-center justify-center gap-2 select-none;
+  }
+  
+  .neo-btn-primary {
+    @apply neo-btn bg-neo-yellow hover:bg-yellow-300 shadow-neo hover:shadow-neo-lg;
+  }
+
+  .neo-btn-secondary {
+    @apply neo-btn bg-white hover:bg-neutral-100 shadow-neo hover:shadow-neo-lg;
+  }
+
+  .neo-btn-accent {
+    @apply neo-btn bg-neo-cyan hover:bg-cyan-300 shadow-neo hover:shadow-neo-lg;
+  }
+
+  .neo-btn-pink {
+    @apply neo-btn bg-neo-pink text-white hover:bg-rose-500 shadow-neo hover:shadow-neo-lg;
+  }
+
+  /* Neo-Brutalist Card */
+  .neo-card {
+    @apply bg-white border-3 border-black shadow-neo transition-all duration-200;
+  }
+
+  .neo-card-hover {
+    @apply neo-card hover:-translate-y-1 hover:-translate-x-1 hover:shadow-neo-lg;
+  }
+
+  /* Neo-Brutalist Badges */
+  .neo-badge {
+    @apply font-mono font-bold text-xs uppercase px-2.5 py-1 border-2 border-black inline-flex items-center gap-1.5;
+  }
+
+  /* Input fields */
+  .neo-input {
+    @apply font-mono bg-white border-3 border-black px-4 py-3 shadow-neo-sm focus:outline-none focus:ring-0 focus:shadow-neo focus:bg-yellow-50/50 transition-all;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFFDF5;
+  border-left: 3px solid #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFE600;
+  border: 3px solid #000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00F0FF;
+}
+
+/* Marquee keyframe adjustments */
+.pause-hover:hover .marquee-track {
+  animation-play-state: paused;
+}
